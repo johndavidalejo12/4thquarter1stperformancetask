@@ -1,0 +1,227 @@
+<html>
+<head>
+    <title>4thquarter1stperformancetask</title>
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 50px;
+            color: pink;
+            transition: color 0.5s; 
+        }
+        h1:hover{
+            color:blueviolet;
+            transition: color 0.5s;
+        }
+        p {
+            font-size: 25px;
+            color: rgb(255, 0, 0);
+            transition: color 0.5s; 
+        }
+        .alert {
+            padding: 20px;
+            background-color: #f44336; 
+            color: white;
+            margin-bottom: 15px;
+        }
+        .number-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #ffffff;
+            padding: 5px 10px;
+            border: 1px solid #000000;
+        }
+        p:hover {
+            color: blue;
+            cursor: pointer; 
+        }
+        input {
+            color: green;
+        }
+        body {
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #submitBtn {
+            display: block;
+            margin: 0 auto; 
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body background="background1">     
+    
+
+<h1>Survey</h1>
+<form id="surveyForm">
+    <p>
+        1. Which stage are you in?<br>
+        <input type="checkbox" name="check" onclick="onlyOne(this)">Infancy (0-2 years)<br>
+        <input type="checkbox" name="check" onclick="onlyOne(this)">Early Childhood (2-6 years)<br>
+        <input type="checkbox" name="check" onclick="onlyOne(this)">Childhood (6-12 years)<br>
+        <input type="checkbox" name="check" onclick="onlyOne(this)">Adolescence (12-18 years)<br>
+        <input type="checkbox" name="check" onclick="onlyOne(this)">Early Adulthood (18-40 years)<br>
+        <input type="checkbox" name="check" onclick="onlyOne(this)">Middle Adulthood (40-65 years)<br>
+        <input type="checkbox" name="check" onclick="onlyOne(this)">Late Adulthood (65+ years)<br>
+    </p>
+    <p>
+        2. If given a chance to watch a movie what genre will you choose?<br>
+        <input type="checkbox" name="box" onclick="onlytwo(this)">Romance<br>
+        <input type="checkbox" name="box" onclick="onlytwo(this)">Action<br>
+        <input type="checkbox" name="box" onclick="onlytwo(this)">Drama<br>
+        <input type="checkbox" name="box" onclick="onlytwo(this)">Fantasy<br>
+        <input type="checkbox" name="box" onclick="onlytwo(this)">Horror<br>
+        <input type="checkbox" name="box" onclick="onlytwo(this)">Science Fiction<br>
+        <input type="checkbox" name="box" onclick="onlytwo(this)">Adventure<br>
+        <input type="checkbox" name="box" onclick="onlytwo(this)">Comedy<br>
+        <input type="checkbox" name="box" onclick="onlytwo(this)">Thriller<br>
+        <input type="checkbox" name="box" onclick="onlytwo(this)">Animation<br>
+    </p>
+    <p>
+        3. In your free time what do you want to do?<br>
+        <input type="checkbox" name="ch" onclick="onlythree(this)">Sleep<br>
+        <input type="checkbox" name="ch" onclick="onlythree(this)">Going out with friends<br>
+        <input type="checkbox" name="ch" onclick="onlythree(this)">Reading a book<br>
+        <input type="checkbox" name="ch" onclick="onlythree(this)">Playing Games<br>
+        <input type="checkbox" name="ch" onclick="onlythree(this)">Journaling<br>
+        <input type="checkbox" name="ch" onclick="onlythree(this)">Practicing or Enhancing your hobby/hobbies<br>
+    </p>
+    <p>
+        4. In choosing an ice cream flavor which do you prefer?<br>
+        <input type="checkbox" name="che" onclick="onlyfour(this)">Strawberry<br>
+        <input type="checkbox" name="che" onclick="onlyfour(this)">Chocolate<br>
+        <input type="checkbox" name="che" onclick="onlyfour(this)">Vanilla<br>
+        <input type="checkbox" name="che" onclick="onlyfour(this)">Mint<br>
+        <input type="checkbox" name="che" onclick="onlyfour(this)">Rocky Road<br>
+        <input type="checkbox" name="che" onclick="onlyfour(this)">Cookies and Cream<br>
+        <input type="checkbox" name="che" onclick="onlyfour(this)">Coffee<br>
+    </p>
+    <p>
+        5. In transporting to school what do you use?<br>
+        <input type="checkbox" name="chec" onclick="onlyfive(this)">Car<br>
+        <input type="checkbox" name="chec" onclick="onlyfive(this)">Walking<br>
+        <input type="checkbox" name="chec" onclick="onlyfive(this)">Tricycle<br>
+        <input type="checkbox" name="chec" onclick="onlyfive(this)">Jeepney<br>
+        <input type="checkbox" name="chec" onclick="onlyfive(this)">Bus<br>
+        <input type="checkbox" name="chec" onclick="onlyfive(this)">Motorcycle<br>
+    </p>
+    <p>
+        6. In choosing a shoe brand which do you prefer?<br>
+        <input type="checkbox" name="k" onclick="onlysix(this)">Nike<br>
+        <input type="checkbox" name="k" onclick="onlysix(this)">Adidas<br>
+        <input type="checkbox" name="k" onclick="onlysix(this)">Fila<br>
+        <input type="checkbox" name="k" onclick="onlysix(this)">New Balance<br>
+        <input type="checkbox" name="k" onclick="onlysix(this)">Converse<br>
+        <input type="checkbox" name="k" onclick="onlysix(this)">Puma<br>
+        <input type="checkbox" name="k" onclick="onlysix(this)">Reebok<br>
+        <input type="checkbox" name="k" onclick="onlysix(this)">Lacoste<br>
+    </p>
+    <p>
+        7. What device do you use to make a powerpoint presentation?<br>
+        <input type="checkbox" name="kr" onclick="onlyseven(this)">Cellphone<br>
+        <input type="checkbox" name="kr" onclick="onlyseven(this)">Tablet<br>
+        <input type="checkbox" name="kr" onclick="onlyseven(this)">iPad<br>
+        <input type="checkbox" name="kr" onclick="onlyseven(this)">Computer<br>
+        <input type="checkbox" name="kr" onclick="onlyseven(this)">Laptop<br>
+    </p>
+    <p>
+        8. In picking soft drinks which do you prefer?<br>
+        <input type="checkbox" name="kri" onclick="onlyeight(this)">Pepsi<br>
+        <input type="checkbox" name="kri" onclick="onlyeight(this)">Coca Cola<br>
+        <input type="checkbox" name="kri" onclick="onlyeight(this)">7UP<br>
+        <input type="checkbox" name="kri" onclick="onlyeight(this)">Mountain Dew<br>
+        <input type="checkbox" name="kri" onclick="onlyeight(this)">Sprite<br>
+        <input type="checkbox" name="kri" onclick="onlyeight(this)">Fanta<br>
+    </p>
+    <p>
+        9. If your career gonna change what career you gonna choose?<br>
+        <input type="checkbox" name="kris" onclick="onlynine(this)">Engineer<br>
+        <input type="checkbox" name="kris" onclick="onlynine(this)">Businessman<br>
+        <input type="checkbox" name="kris" onclick="onlynine(this)">Doctor<br>
+        <input type="checkbox" name="kris" onclick="onlynine(this)">Nurse<br>
+        <input type="checkbox" name="kris" onclick="onlynine(this)">Architect<br>
+        <input type="checkbox" name="kris" onclick="onlynine(this)">Journalist<br>
+        <input type="checkbox" name="kris" onclick="onlynine(this)">Chef<br>
+    </p>
+    <p>
+        10. If you're given a chance to travel to another country in Southeast Asia, which would you choose?<br>
+        <input type="checkbox" name="krist" onclick="onlyten(this)">Thailand<br>
+        <input type="checkbox" name="krist" onclick="onlyten(this)">Vietnam<br>
+        <input type="checkbox" name="krist" onclick="onlyten(this)">Singapore<br>
+        <input type="checkbox" name="krist" onclick="onlyten(this)">Indonesia<br>
+        <input type="checkbox" name="krist" onclick="onlyten(this)">Laos<br>
+        <input type="checkbox" name="krist" onclick="onlyten(this)">Cambodia<br>
+    </p>
+
+    <button type="button" id="submitBtn" onclick="showAlert()">Submit</button>
+
+</form>
+
+<script>
+    function showAlert() {
+        alert("Thank you for completing the survey!");
+    }
+
+    function onlyOne(checkbox) {
+        var checkboxes = document.getElementsByName('check');
+        checkboxes.forEach((item) => {
+            if (item !== checkbox) item.checked = false;
+        });
+    }
+    function onlytwo(checkbox) {
+        var checkboxes = document.getElementsByName('box');
+        checkboxes.forEach((item) => {
+            if (item !== checkbox) item.checked = false;
+        });
+    }
+    function onlythree(checkbox) {
+        var checkboxes = document.getElementsByName('ch');
+        checkboxes.forEach((item) => {
+            if (item !== checkbox) item.checked = false;
+        });
+    }
+    function onlyfour(checkbox) {
+        var checkboxes = document.getElementsByName('che');
+        checkboxes.forEach((item) => {
+            if (item !== checkbox) item.checked = false;
+        });
+    }
+    function onlyfive(checkbox) {
+        var checkboxes = document.getElementsByName('chec');
+        checkboxes.forEach((item) => {
+            if (item !== checkbox) item.checked = false;
+        });
+    }
+    function onlysix(checkbox) {
+        var checkboxes = document.getElementsByName('k');
+        checkboxes.forEach((item) => {
+            if (item !== checkbox) item.checked = false;
+        });
+    }
+    function onlyseven(checkbox) {
+        var checkboxes = document.getElementsByName('kr');
+        checkboxes.forEach((item) => {
+            if (item !== checkbox) item.checked = false;
+        });
+    }
+    function onlyeight(checkbox) {
+        var checkboxes = document.getElementsByName('kri');
+        checkboxes.forEach((item) => {
+            if (item !== checkbox) item.checked = false;
+        });
+    }
+    function onlynine(checkbox) {
+        var checkboxes = document.getElementsByName('kris');
+        checkboxes.forEach((item) => {
+            if (item !== checkbox) item.checked = false;
+        });
+    }
+    function onlyten(checkbox) {
+        var checkboxes = document.getElementsByName('krist');
+        checkboxes.forEach((item) => {
+            if (item !== checkbox) item.checked = false;
+        });
+    }
+</script>
+</body>
+</html>
